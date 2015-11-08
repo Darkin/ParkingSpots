@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-yO-DT3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ble-Hd-DeT">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="455"/>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="nPD-B4-zm8"/>
+                                        </connections>
+                                    </mapView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fmu-xB-HOj">
+                                        <rect key="frame" x="0.0" y="455" width="600" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where can I park?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5T-Yj-5Ie">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="wHZ-j9-9OC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Mode of transport" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fT-ik-VoB">
+                                                <rect key="frame" x="305" y="10" width="295" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8lT-Zx-2YP">
+                                        <rect key="frame" x="0.0" y="495" width="600" height="105"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="uke-5o-kM1">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Thd-eg-X4n">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="parkingTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vs2-TB-zAk"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLw-SE-vt7">
+                                                        <rect key="frame" x="55" y="0.0" width="242" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boat" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uas-Rh-ISV">
+                                                        <rect key="frame" x="303" y="0.0" width="242" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XqL-yX-EIh">
+                                                        <rect key="frame" x="551" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="parkingTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="S7G-iL-cIk"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="Uas-Rh-ISV" firstAttribute="width" secondItem="CLw-SE-vt7" secondAttribute="width" id="Wkm-E5-Dyo"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="RXN-ig-VHu">
+                                                <rect key="frame" x="0.0" y="37" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxY-At-iRB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="parkingTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RgI-k1-9MG"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bicycile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUe-aR-0ui">
+                                                        <rect key="frame" x="55" y="0.0" width="242" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motorcycle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7W-ls-DDe">
+                                                        <rect key="frame" x="303" y="0.0" width="242" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2z-jH-3tM">
+                                                        <rect key="frame" x="551" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="parkingTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="i1r-fU-TdU"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="h7W-ls-DDe" firstAttribute="width" secondItem="vUe-aR-0ui" secondAttribute="width" id="OpF-TR-vPk"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="WCr-7Q-RLg">
+                                                <rect key="frame" x="0.0" y="74" width="600" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLN-xk-Uwu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="parkingTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6oa-Ib-qQ5"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helicopter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byG-vj-sMI">
+                                                        <rect key="frame" x="55" y="0.0" width="242" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jetpack" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h68-R5-cqd">
+                                                        <rect key="frame" x="303" y="0.0" width="242" height="31"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vrd-if-0xR">
+                                                        <rect key="frame" x="551" y="0.0" width="51" height="31"/>
+                                                        <animations/>
+                                                        <connections>
+                                                            <action selector="parkingTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CGT-ET-4xu"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstItem="h68-R5-cqd" firstAttribute="width" secondItem="byG-vj-sMI" secondAttribute="width" id="jqF-lM-NCH"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="Fmu-xB-HOj" firstAttribute="leadingMargin" secondItem="0Qi-yO-DT3" secondAttribute="leading" id="3NS-yw-hq1"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Fmu-xB-HOj" secondAttribute="trailing" id="7wM-ap-Amm"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="8lT-Zx-2YP" secondAttribute="trailing" id="MFw-cz-r1g"/>
+                                    <constraint firstItem="ble-Hd-DeT" firstAttribute="leading" secondItem="0Qi-yO-DT3" secondAttribute="leading" id="V9f-ZJ-Hr1"/>
+                                    <constraint firstAttribute="trailing" secondItem="ble-Hd-DeT" secondAttribute="trailing" id="noX-cm-obN"/>
+                                    <constraint firstItem="8lT-Zx-2YP" firstAttribute="leading" secondItem="0Qi-yO-DT3" secondAttribute="leadingMargin" id="z1S-pC-geM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Qi-yO-DT3" secondAttribute="trailing" id="Hir-Ab-bLP"/>
+                            <constraint firstItem="0Qi-yO-DT3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UAj-hM-Q0Q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Qi-yO-DT3" secondAttribute="bottom" id="lfo-oW-6CX"/>
+                            <constraint firstItem="0Qi-yO-DT3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vaT-3S-Ca0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bikeSwitch" destination="CxY-At-iRB" id="8em-8y-M0n"/>
+                        <outlet property="boatSwitch" destination="XqL-yX-EIh" id="8wt-yB-l2z"/>
+                        <outlet property="carSwitch" destination="Thd-eg-X4n" id="0r7-KU-s24"/>
+                        <outlet property="firstTitle" destination="g5T-Yj-5Ie" id="NkV-nF-Ih3"/>
+                        <outlet property="helicopterSwitch" destination="hLN-xk-Uwu" id="oIn-Da-kaK"/>
+                        <outlet property="jetpackSwitch" destination="Vrd-if-0xR" id="xZ9-wU-4uh"/>
+                        <outlet property="mapView" destination="ble-Hd-DeT" id="1hJ-cK-SVs"/>
+                        <outlet property="motorcycleSwitch" destination="r2z-jH-3tM" id="BzB-E3-cdK"/>
+                        <outlet property="secondTitle" destination="3fT-ik-VoB" id="ezq-Zq-vJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="423"/>
+        </scene>
+    </scenes>
+</document>
