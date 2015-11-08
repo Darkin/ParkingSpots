@@ -62,11 +62,11 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ParkingObjectIdentifier"];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            annotationView.image = annotation.image;
-            annotationView.frame = CGRectMake(annotationView.frame.origin.x, annotationView.frame.origin.y, 20, 20);
         } else {
             annotationView.annotation = annotation;
         }
+        annotationView.image = annotation.image;
+        annotationView.frame = CGRectMake(annotationView.frame.origin.x, annotationView.frame.origin.y, 20, 20);
         return annotationView;
     }
     
